@@ -1,40 +1,49 @@
 const fs = require("fs");
 const path = require("path");
 const program = require("./commander");
+const inputFolder = `${program.folder}`;
+const outputFolder = `${program.output}`;
 
-function getFiles(dir, outputFiles) {
-  outputFiles = [];
+function getFiles(dir) {
+  const outputFiles = [];
   const files = fs.readdirSync(dir);
-  for (const i in files) {
-    const name = dir + "/" + files[i];
+  files.map(i => {
+    const name = path.join(dir, i);
     if (fs.statSync(name).isDirectory()) {
       getFiles(name, outputFiles);
     } else {
       outputFiles.push(name);
     }
-  }
+  });
   return outputFiles;
 }
 
-function sortFiles(files) {
-  if (!fs.existsSync(`${program.output}`)) {
-    fs.mkdirSync(`${program.output}`);
+async function sortFiles() {
+  let files = await getFiles(inputFolder);
+  if (!fs.existsSync(outputFolder)) {
+    fs.mkdirSync(outputFolder);
   }
-  files.forEach(function(item) {
+  files.map(item => {
     const name = path.basename(item);
-    const dirName = `${program.output}` + "/" + name.slice(0, 1);
+    const firstLetter = name.substr(0, 1).toLowerCase();
+    const dirName = path.join(outputFolder, firstLetter);
     if (!fs.existsSync(dirName)) {
       fs.mkdirSync(dirName);
     }
     const readable = fs.createReadStream(item);
-    const writeable = fs.createWriteStream(dirName + "/" + name);
+    const writeable = fs.createWriteStream(path.join(dirName, name));
     readable.pipe(writeable);
   });
 }
 
 if (program.folder) {
-  sortFiles(getFiles(program.folder));
-  console.log(`Copied to ${program.output}`);
+  try {
+    sortFiles();
+    console.log(`Copied to ${outputFolder}`);
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
+  }
 } else {
-  console.log(`Folder ${program.folder} doesn't exist`);
+  console.log(`Folder ${outputFolder} doesn't exist`);
 }
