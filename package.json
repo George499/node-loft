@@ -1,0 +1,21 @@
+{
+  "name": "node-course",
+  "version": "y",
+  "main": "index",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.2",
+    "express-handlebars": "^4.0.2",
+    "global": "^4.4.0",
+    "lowdb": "^1.0.0",
+    "mongoose": "^5.9.7",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.2",
+    "pug2hbs": "^1.0.5"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index"
+  }
+}
