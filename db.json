@@ -4,21 +4,26 @@
     "password": "test"
   },
   "skills": {
-    "age": "33",
-    "concerts": "33",
-    "cities": "33",
-    "years": "33"
+    "age": "55",
+    "concerts": "55",
+    "cities": "55",
+    "years": "55"
   },
   "products": [
     {
       "imgpath": "uploads\\qig0uDn2UQU.jpg",
-      "name": "",
-      "price": ""
+      "name": "ee",
+      "price": "44"
+    },
+    {
+      "imgpath": "uploads\\qig0uDn2UQU.jpg",
+      "name": "o",
+      "price": "99"
     }
   ],
   "emails": {
-    "name": "George Isaev",
-    "email": "gi.32@mail.ru",
-    "message": "ddddddd"
+    "name": "",
+    "email": "",
+    "message": ""
   }
 }

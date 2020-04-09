@@ -1,8 +1,10 @@
-{{> head}}
 <header class="header">
   <div class="container header__container">
     {{> header}}
-    <form class="form-login" action="/login" method="POST">
+    <form status='msglogin' class="form-login" action="/login" method="POST">
+      {{#if msglogin}}
+      <div class="status">{{msglogin}}</div>
+      {{/if}}
       <div class="form-login__line">
         <label class="form-login__label" for="">Привет,</label>
         <input class="form-login__input" type="email" name="email" placeholder="E-MAIL">

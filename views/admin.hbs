@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Admin page</title>
-  <meta content="" name="author">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="ie=edge" http-equiv="x-ua-compatible">
-  <link rel="stylesheet" href="/assets/css/foundation.min.css?rel=0.0.1">
-  <link rel="stylesheet" href="/assets/css/app.min.css?rel=0.0.1">
-  <script src="/assets/js/foundation.min.js?rel=0.0.1" defer></script>
-  <script src="/assets/js/app.min.js?rel=0.0.1" defer></script>
-  <script src="/assets/js/admin.min.js?rel=0.0.1" defer></script>
-  <!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-
 <body>
+  {{#if isAuthed}}
   <div class="wrapper">
     <header class="admin-header">
       <div class="container admin-header__container">
@@ -32,6 +12,9 @@
         <div class="form-container">
           <form class="form-skill" action="/admin/skills" method="POST">
             <div class="form-title">Счетчики</div>
+            {{#if msgskill}}
+            <div class="status">{{msgskill}}</div>
+            {{/if}}
             <label class="form-skill__input-line"> <span class="form-skill__input-title">Возраст</span>
               <input id="age" class="form-skill__input" name="age" type="number">
             </label>
@@ -50,6 +33,9 @@
           </form>
           <form class="form-upload" action="/admin/upload" method="POST" enctype="multipart/form-data">
             <div class="form-title">Добавить товар</div>
+            {{#if msgfile}}
+            <div class="status">{{msgfile}}</div>
+            {{/if}}
             <div class="form-upload__input-line">
               <div class="form-upload__wraper">
                 <label class="form-upload__label">
@@ -72,6 +58,7 @@
       </div>
     </section>
   </div>
+  {{/if}}
 </body>
 
 </html>
