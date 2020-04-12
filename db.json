@@ -4,21 +4,26 @@
     "password": "test"
   },
   "skills": {
-    "age": "55",
-    "concerts": "55",
-    "cities": "55",
-    "years": "55"
+    "age": "12",
+    "concerts": "12",
+    "cities": "12",
+    "years": "12"
   },
   "products": [
     {
-      "imgpath": "uploads\\qig0uDn2UQU.jpg",
-      "name": "ee",
-      "price": "44"
+      "imgpath": "assets\\img\\javascript_encapsulation.jpg",
+      "name": "ff",
+      "price": "123"
     },
     {
-      "imgpath": "uploads\\qig0uDn2UQU.jpg",
-      "name": "o",
-      "price": "99"
+      "imgpath": "assets\\img\\photo_2018-06-03_11-49-55.jpg",
+      "name": "d",
+      "price": "123"
+    },
+    {
+      "imgpath": "assets\\img\\142--15-09-20--14-24-00.jpg",
+      "name": "ff",
+      "price": "123"
     }
   ],
   "emails": {

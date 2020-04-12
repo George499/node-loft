@@ -1,5 +1,6 @@
 module.exports = function (req, res, next) {
-    res.locals.isAuthed = req.session.isAuth
-
-    next()
+  if (req.session.isAuth) {
+    return next()
+  }
+  res.redirect('/')
 }
