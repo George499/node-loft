@@ -1,24 +1,35 @@
 {
-  "name": "node-course",
-  "version": "0.0.1",
-  "main": "index",
-  "license": "MIT",
+  "name": "koa-webinar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "admin": "node ./models/addAdmin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
-    "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
-    "express-fileupload": "^1.1.7-alpha.2",
-    "express-handlebars": "^4.0.2",
-    "express-session": "^1.17.0",
-    "global": "^4.4.0",
+    "@koa/multer": "^2.0.2",
+    "@sendgrid/mail": "^6.5.5",
+    "dotenv": "^8.2.0",
+    "flat-cache": "^2.0.1",
+    "koa": "^2.11.0",
+    "koa-better-flash": "^0.0.4",
+    "koa-body": "^4.1.1",
+    "koa-connect-flash": "^0.1.2",
+    "koa-filestore": "^1.0.4",
+    "koa-pug": "^4.0.3",
+    "koa-router": "^8.0.8",
+    "koa-session": "^5.13.1",
+    "koa-static": "^5.0.0",
     "lowdb": "^1.0.0",
-    "mongoose": "^5.9.7",
     "multer": "^1.4.2",
     "nodemon": "^2.0.3",
-    "pug2hbs": "^1.0.5",
-    "session-file-store": "^1.4.0"
-  },
-  "scripts": {
-    "start": "nodemon index.js"
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
