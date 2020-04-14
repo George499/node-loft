@@ -8,8 +8,34 @@ const { promisify } = require('util')
 const rename = promisify(fs.rename)
 
 module.exports.index = async (ctx, next) => {
-  await ctx.render('pages/index', { msgemail: ctx.flash('email')[0] })
-  next()
+  const _skills = db.get('skills').value()
+  const _products = db.get('products').value()[0]
+  skills = [
+    {
+      number: _skills.age,
+      text: 'Возраст начала занятий на скрипке',
+    },
+    {
+      number: _skills.concerts,
+      text: 'Концертов отыграл',
+    },
+    {
+      number: _skills.cities,
+      text: 'Максимальное число городов в туре',
+    },
+    {
+      number: _skills.years,
+      text: 'Лет на сцене в качестве скрипача',
+    },
+  ]
+  products = [
+    {
+      src: _products.imgpath,
+      name: _products.name,
+      price: _products.price,
+    }
+  ]
+  await ctx.render('pages/index', { msgemail: ctx.flash('email')[0], skills, products })
 }
 
 module.exports.skillsUpdate = async (ctx, next) => {
@@ -19,7 +45,7 @@ module.exports.skillsUpdate = async (ctx, next) => {
 
 module.exports.uploadUpdate = async (ctx, next) => {
   let product = {
-    imgpath: path.join('assets/img/products', ctx.file.originalname),
+    imgpath: path.join('public/assets/img/products', ctx.file.originalname),
     name: ctx.request.body.name,
     price: ctx.request.body.price,
   }

@@ -4,14 +4,34 @@
     "password": "test"
   },
   "skills": {
-    "age": "",
-    "concerts": "",
-    "cities": "",
-    "years": ""
+    "age": "11",
+    "concerts": "11",
+    "cities": "11",
+    "years": "11"
   },
   "products": [
     {
-      "imgpath": "assets\\img\\products\\qig0uDn2UQU.jpg",
+      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
+      "name": "w",
+      "price": "3"
+    },
+    {
+      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
+      "name": "w",
+      "price": "3"
+    },
+    {
+      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
+      "name": "w",
+      "price": "3"
+    },
+    {
+      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
+      "name": "w",
+      "price": "3"
+    },
+    {
+      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
       "name": "w",
       "price": "3"
     }

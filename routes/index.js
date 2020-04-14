@@ -2,7 +2,7 @@ const Router = require('koa-router')
 const router = new Router()
 const koaBody = require('koa-body')
 const controllers = require('../controllers')
-const validation = require('../libs/validation')
+const validation = require('../helpers/validation')
 const multer = require('@koa/multer');
 const upload = multer({ dest: 'uploads/' })
 
