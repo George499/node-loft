@@ -11,27 +11,7 @@
   },
   "products": [
     {
-      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
-      "name": "w",
-      "price": "3"
-    },
-    {
-      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
-      "name": "w",
-      "price": "3"
-    },
-    {
-      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
-      "name": "w",
-      "price": "3"
-    },
-    {
-      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
-      "name": "w",
-      "price": "3"
-    },
-    {
-      "imgpath": "public\\assets\\img\\products\\qig0uDn2UQU.jpg",
+      "imgpath": "assets\\img\\qig0uDn2UQU.jpg",
       "name": "w",
       "price": "3"
     }

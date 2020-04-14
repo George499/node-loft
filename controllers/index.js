@@ -45,7 +45,7 @@ module.exports.skillsUpdate = async (ctx, next) => {
 
 module.exports.uploadUpdate = async (ctx, next) => {
   let product = {
-    imgpath: path.join('public/assets/img/products', ctx.file.originalname),
+    imgpath: path.join('assets/img', ctx.file.originalname),
     name: ctx.request.body.name,
     price: ctx.request.body.price,
   }
