@@ -1,0 +1,24 @@
+{
+  "users": {
+    "email": "test@test.ru",
+    "password": "test"
+  },
+  "skills": {
+    "age": "11",
+    "concerts": "11",
+    "cities": "11",
+    "years": "11"
+  },
+  "products": [
+    {
+      "imgpath": "assets\\img\\qig0uDn2UQU.jpg",
+      "name": "w",
+      "price": "3"
+    }
+  ],
+  "emails": {
+    "name": "h",
+    "email": "2@l.ru",
+    "message": "uuu"
+  }
+}
