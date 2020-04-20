@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { tokensSelector, refreshTokenRequest, logout } from '../store/auth';
 import { openNotification } from '../store/notifications';
-const baseURL = '';
+const baseURL = 'https://node-loft-hw.herokuapp.com/api/';
 const instance = axios.create({ baseURL });
 
 const waitQueue = [];
